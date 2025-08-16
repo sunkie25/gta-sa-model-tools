@@ -14,7 +14,7 @@ mkdir col_output >> %LOGFILE% 2>&1
 echo Converting .dff files to models_sa... >> %LOGFILE%
 for %%i in (models\*.dff) do (
     echo Processing %%i >> %LOGFILE%
-    convdff -v GTASA "%%i" "models_sa\%%~ni.dff" >> %LOGFILE% 2>&1
+    convdff -v 36003 "%%i" "models_sa\%%~ni.dff" >> %LOGFILE% 2>&1
 )
 
 echo Generating .col files... >> %LOGFILE%
@@ -29,3 +29,4 @@ col_rename.exe >> %LOGFILE% 2>&1
 echo --- Conversion process finished --- >> %LOGFILE%
 echo Log saved in %LOGFILE%
 pause
+
